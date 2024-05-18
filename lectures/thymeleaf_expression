@@ -1,0 +1,6 @@
+Thymeleaf Standard Expression
+	- ${} variable		ใช้สำหรับผูกข้อมูลระหว่าง template context(model) เข้ากับ html(view)
+	- *{} selection
+	- #{} message
+	- @{} link
+	- ~{} fragment
