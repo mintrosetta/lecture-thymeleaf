@@ -1,6 +1,6 @@
 Thymeleaf Standard Expression
 	- ${} variable		ใช้สำหรับผูกข้อมูลระหว่าง template context(model) เข้ากับ html(view)
-	- *{} selection
+	- *{} selection		ใช้สำหรับ element ลูกที่มี element แม่เป็น th:object โดยจะหยิบข้อมูลใน properties ของ object ออกมา
 	- #{} message
 	- @{} link
 	- ~{} fragment

@@ -1,4 +1,4 @@
-package net.javaguides.thymeleaf.controller;
+package net.javaguides.thymeleaf.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

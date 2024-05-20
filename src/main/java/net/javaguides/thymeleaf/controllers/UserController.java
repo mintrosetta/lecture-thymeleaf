@@ -1,4 +1,4 @@
-package net.javaguides.thymeleaf.controller;
+package net.javaguides.thymeleaf.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,10 +15,20 @@ public class UserController {
 	@GetMapping("variable")
 	public String variableExpression(Model model) {
 		User user = new User("mint.rosetta", "mint.rosetta2001@gmail.com", "ADMIN", "Male");
-		
+
 		model.addAttribute("user", user);
-		
+
 		return "variable-expression";
 	}
-	
+
+	// handler method to handler selection expression
+	// http://localhost:8080/users/selection-expression
+	@GetMapping("selection-expression")
+	public String selectionExpression(Model model) {
+		User user = new User("mint.rosetta", "mint.rosetta2001@gmail.com", "ADMIN", "Male");
+
+		model.addAttribute("user", user);
+
+		return "selection-expression";
+	}
 }
