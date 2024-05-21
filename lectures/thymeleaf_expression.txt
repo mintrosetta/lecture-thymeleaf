@@ -3,4 +3,6 @@ Thymeleaf Standard Expression
 	- *{} selection		ใช้สำหรับ element ลูกที่มี element แม่เป็น th:object โดยจะหยิบข้อมูลใน properties ของ object ออกมา
 	- #{} message		ใช้แสดงข้อความที่ได้มาจากไฟล์ resource หรือ message source เช่น .properties
 	- @{} link			ใช้ในการสร้าง URL ใน thymeleaf template ทำให้ URL เป็นแบบ Dynamic เช่น @{/users} จะได้ http://localhost:8080/users
-	- ~{} fragment
+	- ~{} fragment 		ทำให้เราสามารถเรียกใช้งานส่วนย่อย ๆ จากไฟล์ html อื่น ๆ ในไฟล์ปัจจุบันได้
+
+
