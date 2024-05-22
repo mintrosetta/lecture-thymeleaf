@@ -23,4 +23,9 @@ Thymeleaf Standard Expression
 	th:unless	ถ้าหากเงื่อนไขถูกต้อง จะไม่แสดงผล (ทำงานตรงข้ามกับ if)
 	th:switch	ใช้เมื่อมีเงื่อนไขการตัดสินใจเป็นจำนวนมาก โดยจะใช้คู่กับ th:case
 
+	การจัดการกับแบบฟอร์ม
+		th:action	ระบุ url ที่จะใช้ดำเนินการเมื่อ submit form
+		th:object	ระบุ object ที่จะใช้ผูกข้อมูลระหว่าง properties กับ form เข้าด้วยกัน
+		th:field	ระบุว่า input นี้จะผูหเข้ากับ propereis อะไรของ object
+
 
