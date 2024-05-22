@@ -4,7 +4,11 @@ public class User {
 	private String name;
 	private String email;
 	private String role;
-	private String gender;
+	private String gender; 
+	
+	public User() {
+		
+	}
 	
 	public User(String name, String email, String role, String gender) {
 		super();
