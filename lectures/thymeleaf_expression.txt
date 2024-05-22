@@ -9,5 +9,7 @@ Thymeleaf Standard Expression
 							- th:insert		ใช้สำหรับแทรกเนื้อหาเข้าไปในจุดที่กำหนด
 							- th:replace	แทนที่โครงสร้าง html เดิม
 						~{path file :: fragment name}
+	
+	th:text		แสดงข้อความในตัวแปรที่ระบุ th:text="${message}"
 
 
