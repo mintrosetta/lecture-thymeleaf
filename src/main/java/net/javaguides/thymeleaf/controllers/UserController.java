@@ -3,6 +3,7 @@ package net.javaguides.thymeleaf.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,14 @@ import net.javaguides.thymeleaf.model.User;
 @Controller
 @RequestMapping("users")
 public class UserController {
+	
+	private List<User> users = new ArrayList<>();
+	
+	public UserController() {
+		this.users.add(new User("mint.rosetta", "mint.rosetta@gmail.com", "ADMIN", "Male"));
+		this.users.add(new User("mint.colorfuls", "mint.colorfuls@gmail.com", "MEMBER", "Male"));
+		this.users.add(new User("bike.chanokchon", "bike.chanokchon@gmail.com", "STAFF", "Male"));
+	}
 
 	// handler method to handle variable-expression request
 	@GetMapping("variable-expression")
@@ -57,34 +66,23 @@ public class UserController {
 	}
 	
 	@GetMapping("")
-	public String getUsers(Model model) {
-		User admin1 = new User("Admin 01", "admin@gmail.com", "ADMIN", "Female");
-		User admin2 = new User("Admin 02", "admin@gmail.com", "ADMIN", "Female");
-		User admin3 = new User("Admin 03", "admin@gmail.com", "ADMIN", "Female");
-		
-		List<User> users = new ArrayList<>();
-		users.add(admin1);
-		users.add(admin2);
-		users.add(admin3);
-		
-		model.addAttribute("users", users);
+	public String getUsers(Model model) {		
+		model.addAttribute("users", this.users);
 		
 		return "users";
 	}
 	
 	@GetMapping("if-unless")
 	public String ifUnless(Model model) {
-		User admin1 = new User("Admin 01", "admin@gmail.com", "ADMIN", "Female");
-		User admin2 = new User("Admin 02", "admin@gmail.com", "STAFF", "Female");
-		User admin3 = new User("Admin 03", "admin@gmail.com", "ADMIN", "Female");
-		
-		List<User> users = new ArrayList<>();
-		users.add(admin1);
-		users.add(admin2);
-		users.add(admin3);
-		
-		model.addAttribute("users", users);
+		model.addAttribute("users", this.users);
 		
 		return "if-unless";
+	}
+	
+	@GetMapping("switch-case")
+	public String switchCase(Model model) {
+		model.addAttribute("user", this.users.get(0));
+		
+		return "switch-case";
 	}
 }
