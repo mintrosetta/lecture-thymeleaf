@@ -11,5 +11,13 @@ Thymeleaf Standard Expression
 						~{path file :: fragment name}
 	
 	th:text		แสดงข้อความในตัวแปรที่ระบุ th:text="${message}"
+	th:each		ใช้สำหรับการวนซ้ำ object ที่มาในรูปแบบของ List (list, set, map, array)
+				โดยจะมี arttribute ให้ดังนี้
+					- index		ดึงข้อมูลคำแหน่งปัจจุบันของข้อมูล 
+					- count 	ดึงจำนวนของข้อมูลที่ดำเนินการไปแล้ว
+					- size		ดึงจำนวนของข้อมูลทั้ง list
+					- even/odd	ดึงข้อมูลสำหรับตรวจสอบว่าตำแหน่งนั้นเป็นเลขคู่หรือคี่
+					- first		ตรวจสอบว่ข้อมูลเป็นตัวแลก
+					- last		ตรวจสอบว่าข้อมูลเป็นตัวสุดท้าย
 
 

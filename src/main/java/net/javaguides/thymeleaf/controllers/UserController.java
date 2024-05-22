@@ -1,5 +1,8 @@
 package net.javaguides.thymeleaf.controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -51,5 +54,21 @@ public class UserController {
 	@GetMapping("fragment-expression")
 	public String fragmentExpression(Model model) {
 		return "fragment-expression";
+	}
+	
+	@GetMapping("")
+	public String getUsers(Model model) {
+		User admin1 = new User("Admin 01", "admin@gmail.com", "ADMIN", "Female");
+		User admin2 = new User("Admin 02", "admin@gmail.com", "ADMIN", "Female");
+		User admin3 = new User("Admin 03", "admin@gmail.com", "ADMIN", "Female");
+		
+		List<User> users = new ArrayList<>();
+		users.add(admin1);
+		users.add(admin2);
+		users.add(admin3);
+		
+		model.addAttribute("users", users);
+		
+		return "users";
 	}
 }
