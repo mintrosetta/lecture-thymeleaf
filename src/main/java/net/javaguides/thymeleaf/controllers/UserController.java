@@ -12,7 +12,7 @@ import net.javaguides.thymeleaf.model.User;
 public class UserController {
 
 	// handler method to handle variable-expression request
-	@GetMapping("variable")
+	@GetMapping("variable-expression")
 	public String variableExpression(Model model) {
 		User user = new User("mint.rosetta", "mint.rosetta2001@gmail.com", "ADMIN", "Male");
 
@@ -45,5 +45,11 @@ public class UserController {
 	public String linkExpression(Model model) {
 		model.addAttribute("id", 1);
 		return "link-expression";
+	}
+
+	// handler method to handler fragment expression
+	@GetMapping("fragment-expression")
+	public String fragmentExpression(Model model) {
+		return "fragment-expression";
 	}
 }

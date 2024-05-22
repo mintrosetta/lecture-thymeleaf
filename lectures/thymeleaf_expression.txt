@@ -4,5 +4,10 @@ Thymeleaf Standard Expression
 	- #{} message		ใช้แสดงข้อความที่ได้มาจากไฟล์ resource หรือ message source เช่น .properties
 	- @{} link			ใช้ในการสร้าง URL ใน thymeleaf template ทำให้ URL เป็นแบบ Dynamic เช่น @{/users} จะได้ http://localhost:8080/users
 	- ~{} fragment 		ทำให้เราสามารถเรียกใช้งานส่วนย่อย ๆ จากไฟล์ html อื่น ๆ ในไฟล์ปัจจุบันได้
+						โดยจะทำการแยกออกเป็นคำสั่งดังนี้
+							- th:fragment	กำหนดว่า element นี้เป็น flagment
+							- th:insert		ใช้สำหรับแทรกเนื้อหาเข้าไปในจุดที่กำหนด
+							- th:replace	แทนที่โครงสร้าง html เดิม
+						~{path file :: fragment name}
 
 
